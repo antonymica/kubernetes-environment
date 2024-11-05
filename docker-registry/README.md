@@ -1,4 +1,4 @@
-# How To Set Up a Private Docker Registry on Ubuntu 22.04
+# Comment Configurer un Registre Docker Privé sur Ubuntu 22.04
 
 Ce guide vous explique comment installer et configurer Docker Registry sur une machine Ubuntu 22.04 pour stocker et gérer vos images Docker en privé.
 

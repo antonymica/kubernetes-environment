@@ -99,7 +99,7 @@ Ajoutez le contenu suivant :
 ```bash
 services:
   sonarqube:
-    image: sonarqube:community
+    image: sonarqube:lts-community
     hostname: sonarqube
     container_name: sonarqube
     read_only: true
@@ -121,7 +121,7 @@ services:
     image: postgres:15
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
-      interval: 10s
+      interval: 30s
       timeout: 5s
       retries: 5
     hostname: postgresql

@@ -97,3 +97,7 @@ Pour désinstaller K3S et supprimer toutes les configurations associées :
 # Notes
  - La commande `kubectl` peut être utilisée sans `sudo` après modification des permissions du fichier de configuration.
  - Pour plus de flexibilité, les options de configuration de K3S peuvent être ajoutées dans `/etc/rancher/k3s/config.yaml`.
+ - Vous pouvez consulter la documentation de K3S pour plus d'informations sur les configurations avancées et les options disponibles : [Documentation K3S](https://docs.k3s.io/).
+ - Pour des déploiements en production, envisagez de configurer des sauvegardes régulières de votre cluster Kubernetes.
+ - Assurez-vous que votre système d'exploitation et vos paquets sont à jour pour éviter des problèmes de compatibilité.
+ - En cas de besoin d'assistance, rejoignez la communauté K3S sur des forums ou des plateformes comme GitHub et Discord pour échanger avec d'autres utilisateurs.

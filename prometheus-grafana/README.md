@@ -42,7 +42,7 @@ helm install prometheus prometheus-community/prometheus -n monitoring
 Exposez le service Prometheus avec un type NodePort :
 
 ```bash
-kubectl patch svc prometheus-server -n monitoring -p {"spec": {"type": "NodePort"}}'
+kubectl patch svc prometheus-server -n monitoring -p '{"spec": {"type": "NodePort"}}'
 ```
 
 ### 4. Vérifier les pods de Prometheus
@@ -84,7 +84,7 @@ helm install grafana grafana/grafana -n monitoring
 Exposez le service Grafana avec un type NodePort :
 
 ```bash
-kubectl patch svc grafana -n monitoring -p {"spec": {"type": "NodePort"}}'
+kubectl patch svc grafana -n monitoring -p '{"spec": {"type": "NodePort"}}'
 ```
 
 ### 4. Obtenir le mot de passe administrateur de Grafana

@@ -85,6 +85,21 @@ Pour plus de détails, consultez :
    kubectl get all -n kube-system
    ```
 
+   Et pour installer un nouveau controller ingress (nginx):
+
+   [Documentation ici](https://kubernetes.github.io/ingress-nginx/deploy/?ref=blog.thenets.org#bare-metal)
+
+   - Avec HELM :
+      ```bash
+      helm upgrade --install ingress-nginx ingress-nginx \
+      --repo https://kubernetes.github.io/ingress-nginx \
+      --namespace ingress-nginx --create-namespace
+      ```
+
+   - Avec Manifest:
+      ```bash
+      kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0-beta.0/deploy/static/provider/cloud/deploy.yaml
+      ```
 
 # Désinstallation de K3S
 

@@ -31,7 +31,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 Pour accéder à l'interface web d'ArgoCD, vous pouvez soit modifier le type de service en `LoadBalancer`, soit utiliser le port-forwarding :
 
-#### Option 1: Exposer le service avec LoadBalancer
+#### Option 1: Exposer le service avec NodePort
 
 ```bash
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'

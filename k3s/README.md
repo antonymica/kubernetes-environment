@@ -53,6 +53,13 @@ Pour plus de détails, consultez :
    sudo chmod 644 /etc/rancher/k3s/k3s.yaml
    ```
 
+   Puis:
+
+   ```bash
+   echo 'export KUBECONFIG=/etc/rancher/k3s/k3s.yaml' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
 5. **Désactivation de Traefik (facultatif)**
 
    K3S installe par défaut Traefik en tant qu'ingress. Pour désactiver Traefik lors de l'installation, utilisez la commande suivante :

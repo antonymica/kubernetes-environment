@@ -42,7 +42,7 @@ Pour plus de détails, consultez :
 
 3. **Installer Helm**
 
-Pour installer Helm, suivez les instructions disponibles [ici](https://github.com/antonymica/kubernetes-environment/tree/main/helm).
+    Pour installer Helm, suivez les instructions disponibles [ici](https://github.com/antonymica/kubernetes-environment/tree/main/helm).
 
 4. **Ajouter rancher-stable Helm repo**
 
@@ -50,7 +50,7 @@ Pour installer Helm, suivez les instructions disponibles [ici](https://github.co
     helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
     ```
 
-Créez un namespace Kubernetes pour Rancher :
+    Créez un namespace Kubernetes pour Rancher :
 
     ```bash
     kubectl create namespace cattle-system
@@ -58,7 +58,7 @@ Créez un namespace Kubernetes pour Rancher :
 
 5. **Installer cert-manager**
 
-Nous utiliserons Let's Encrypt :
+    Nous utiliserons Let's Encrypt :
 
     ```bash
     kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.16.1/cert-manager.crds.yaml
@@ -95,13 +95,13 @@ Nous utiliserons Let's Encrypt :
 
     `--set hostname=rancher.nomdedomain.com` : Enregistre le DNS de Rancher (doit être configuré avant ou après l'installation).
 
-Si vous avez oublié le mot de passe de bootstrap, exécutez :
+    Si vous avez oublié le mot de passe de bootstrap, exécutez :
 
     ```bash
     kubectl get secret -n cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}{{ "\n" }}'
     ```
 
-Pour obtenir l'URL d'initialisation du tableau de bord :
+    Pour obtenir l'URL d'initialisation du tableau de bord :
 
     ```bash
     echo https://rancher.nomdedomain.com/dashboard/?setup=$(kubectl get secret -n cattle-system bootstrap-secret -o go-template='{{.data.bootstrapPassword|base64decode}}')
@@ -109,4 +109,4 @@ Pour obtenir l'URL d'initialisation du tableau de bord :
 
 ## Note
 
-Ce guide couvre les étapes de base pour installer Rancher avec Helm et cert-manager, en utilisant Let's Encrypt pour les certificats SSL.
+    Ce guide couvre les étapes de base pour installer Rancher avec Helm et cert-manager, en utilisant Let's Encrypt pour les certificats SSL.
